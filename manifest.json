@@ -22,6 +22,7 @@
     "functions": {
         "search": {
             "name": "search",
+            "icon": "Search",
             "script": "dist/search.js",
             "description": "Executa uma pesquisa no Perplexity (chat/completions)",
             "category": "ia",
