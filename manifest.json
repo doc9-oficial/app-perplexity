@@ -21,20 +21,20 @@
      },
     "functions": {
         "search": {
-            "name": "search",
+            "name": "Perplexity",
             "icon": "Search",
             "script": "dist/search.js",
             "description": "Executa uma pesquisa no Perplexity (chat/completions)",
             "category": "ia",
             "values": {
                 "query": "Quem foi Albert Einstein?",
-                "model": "pplx-7b-online",
+                "model": "sonar",
                 "temperature": 0.2
             },
             "help": {
                 "title": "Como usar a função search",
                 "body": "Use esta função para fazer pesquisas usando a API do Perplexity. Você deve fornecer uma consulta obrigatória e pode opcionalmente especificar o modelo e a temperatura.",
-                "footer": "Temperatura padrão é 0.2, modelo padrão é pplx-7b-online.",
+                "footer": "Temperatura padrão é 0.2, modelo padrão é sonar.",
                 "link": "https://www.perplexity.ai/api/docs"
             },
             "params": [
@@ -50,7 +50,7 @@
                     "type": "string",
                     "inputType": "text",
                     "required": false,
-                    "label": "Modelo (default: pplx-7b-online)"
+                    "label": "Modelo (default: sonar)"
                 },
                 {
                     "name": "temperature",
