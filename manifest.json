@@ -1,70 +1,70 @@
 {
-    "name": "perplexity",
-    "version": "1.0.0",
-    "description": "Pesquisa com Perplexity API",
-    "auth": {
-        "description": {
-            "title": "Configuração do Perplexity",
-            "body": "Configure a chave API para interagir com os serviços do Perplexity.",
-            "footer": "Obtenha sua chave em https://www.perplexity.ai/api",
-            "link": "https://www.perplexity.ai/api"
+  "name": "perplexity",
+  "version": "1.0.0",
+  "description": "Pesquisa com Perplexity API",
+  "auth": {
+    "description": {
+      "title": "Configuração do Perplexity",
+      "body": "Configure a chave API para interagir com os serviços do Perplexity.",
+      "footer": "Obtenha sua chave em https://www.perplexity.ai/api",
+      "link": "https://www.perplexity.ai/api"
+    },
+    "params": [
+      {
+        "name": "pplxApiKey",
+        "type": "string",
+        "inputType": "password",
+        "required": true,
+        "label": "Chave API do Perplexity"
+      }
+    ]
+  },
+  "functions": {
+    "search": {
+      "name": "Perplexity - Pesquisa com IA",
+      "icon": "Search",
+      "script": "dist/search.js",
+      "description": "Executa uma pesquisa no Perplexity (chat/completions)",
+      "category": "ia",
+      "values": {
+        "query": "Quem foi Albert Einstein?",
+        "model": "sonar",
+        "temperature": 0.2
+      },
+      "help": {
+        "title": "Como usar a função search",
+        "body": "Use esta função para fazer pesquisas usando a API do Perplexity. Você deve fornecer uma consulta obrigatória e pode opcionalmente especificar o modelo e a temperatura.",
+        "footer": "Temperatura padrão é 0.2, modelo padrão é sonar.",
+        "link": "https://www.perplexity.ai/api/docs"
+      },
+      "params": [
+        {
+          "name": "query",
+          "type": "string",
+          "inputType": "text",
+          "required": true,
+          "label": "Prompt da consulta"
         },
-        "params": [
-            {
-                "name": "pplxApiKey",
-                "type": "string",
-                "inputType": "password",
-                "required": true,
-                "label": "Chave API do Perplexity"
-            }
-        ]
-     },
-    "functions": {
-        "search": {
-            "name": "Perplexity",
-            "icon": "Search",
-            "script": "dist/search.js",
-            "description": "Executa uma pesquisa no Perplexity (chat/completions)",
-            "category": "ia",
-            "values": {
-                "query": "Quem foi Albert Einstein?",
-                "model": "sonar",
-                "temperature": 0.2
-            },
-            "help": {
-                "title": "Como usar a função search",
-                "body": "Use esta função para fazer pesquisas usando a API do Perplexity. Você deve fornecer uma consulta obrigatória e pode opcionalmente especificar o modelo e a temperatura.",
-                "footer": "Temperatura padrão é 0.2, modelo padrão é sonar.",
-                "link": "https://www.perplexity.ai/api/docs"
-            },
-            "params": [
-                {
-                    "name": "query",
-                    "type": "string",
-                    "inputType": "text",
-                    "required": true,
-                    "label": "Prompt da consulta"
-                },
-                {
-                    "name": "model",
-                    "type": "string",
-                    "inputType": "text",
-                    "required": false,
-                    "label": "Modelo (default: sonar)"
-                },
-                {
-                    "name": "temperature",
-                    "type": "number",
-                    "inputType": "number",
-                    "required": false,
-                    "label": "Temperatura (default: 0.2)"
-                }
-            ]
+        {
+          "name": "model",
+          "type": "string",
+          "inputType": "text",
+          "required": false,
+          "label": "Modelo (default: sonar)"
+        },
+        {
+          "name": "temperature",
+          "type": "number",
+          "inputType": "number",
+          "required": false,
+          "label": "Temperatura (default: 0.2)"
         }
-    },
-    "config": {
-        "timeout": 60000,
-        "max_retries": 2
-    },
-    "mcp": true
+      ]
+    }
+  },
+  "config": {
+    "timeout": 60000,
+    "max_retries": 2
+  },
+  "mcp": true
 }
