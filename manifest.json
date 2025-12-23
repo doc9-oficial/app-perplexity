@@ -24,7 +24,7 @@
       "name": "Perplexity - Pesquisa com IA",
       "icon": "Search",
       "script": "dist/search.js",
-      "description": "Executa uma pesquisa no Perplexity (chat/completions)",
+      "description": "Executa uma pesquisa no Perplexity",
       "category": "ia",
       "values": {
         "query": "Quem foi Albert Einstein?",
