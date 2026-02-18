@@ -2,6 +2,7 @@
   "name": "perplexity",
   "version": "1.0.0",
   "description": "Pesquisa com Perplexity API",
+  "icon": "BotMessageSquare",
   "auth": {
     "description": {
       "title": "Configuração do Perplexity",
