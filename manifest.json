@@ -1,5 +1,6 @@
 {
   "name": "perplexity",
+  "displayName": "Perplexity",
   "version": "1.0.0",
   "description": "Pesquisa com Perplexity API",
   "icon": "BotMessageSquare",
